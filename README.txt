@@ -1,38 +1,31 @@
-YOUR FINANCE PORTFOLIO WEBSITE
-==============================
+FINANCE PORTFOLIO V2 — BEGINNER GUIDE
 
-FILES
-- index.html  : website content and page structure
-- style.css   : navy-and-gold visual design and responsive layout
-- script.js   : mobile navigation and current year in footer
+This redesign has:
+- One consistent navy/gold palette and two consistent fonts
+- Animated orbit artwork in the hero, scroll-reveal effects and a reading progress bar
+- Mobile navigation and project-detail popups
+- Dedicated Projects, Certificates and Education sections
+- Project cards designed to be linked to your actual PDFs/presentations
 
-BEFORE YOU PUBLISH
-1. Open index.html in a text editor.
-2. Search for YOUR_EMAIL@example.com and replace it with your real email.
-3. Find the LinkedIn button near the bottom and replace https://www.linkedin.com/ with your full LinkedIn profile URL.
-4. Check every date, figure, project detail, and qualification carefully. Edit anything that is inaccurate or you do not want public.
-5. Optional: add a PDF CV. If you do, upload it beside index.html and add a link to it.
+REPLACE THE CURRENT WEBSITE
+1. Open your repository on GitHub.
+2. Open index.html and click the pencil (Edit) icon.
+3. Select all text, replace it with the new index.html content, then Commit changes.
+4. Repeat for style.css and script.js.
+5. GitHub Pages redeploys automatically after the commits.
 
-PREVIEW LOCALLY
-- Double-click index.html to open it in your browser.
-- Internet is needed for the Google Fonts; the page still works without them.
+PROJECT FILES
+1. In the repository, choose Add file > Create new file.
+2. For the filename, type projects/README.md and commit it to create the folder.
+3. Open the projects folder, choose Add file > Upload files, and upload your project PDF/presentation.
+4. To link a PDF from a project card, the code needs a small edit. Tell me the exact uploaded filename and which project card, and I will give you the exact change.
 
-PUBLISH WITH GITHUB PAGES (FREE FOR A PUBLIC REPOSITORY)
-1. Create an account at https://github.com/
-2. Verify your email address and sign in.
-3. Click the + menu near the top right, then New repository.
-4. Repository name: YOUR-USERNAME.github.io (replace YOUR-USERNAME with your actual GitHub username).
-5. Set visibility to Public, then create the repository.
-6. On the repository page, choose Add file > Upload files.
-7. Upload index.html, style.css, and script.js. You can also upload README.txt.
-8. Click Commit changes.
-9. Open Settings > Pages.
-10. Under Build and deployment, choose Deploy from a branch. Select branch main and folder /(root), then Save.
-11. Wait a few minutes and open https://YOUR-USERNAME.github.io/ (replace YOUR-USERNAME).
-12. If it does not appear immediately, wait a little and refresh.
+CERTIFICATES
+Upload certificate PDFs to a certificates/ folder, then replace each “Add certificate file” placeholder in index.html with the matching path, e.g. certificates/bloomberg-market-concepts.pdf.
+Only include credentials you earned; edit certificate titles/providers to match your documents.
 
-BEGINNER NOTES
-- You do not need Git commands or a terminal for these steps.
-- Never upload passwords, private documents, confidential work, or personal data you do not want public.
-- Use only work samples you are allowed to share. Academic/simulated project figures should be labelled accurately.
-- GitHub Pages publishes the repository contents as a public website. Check the repository and website before sharing the link.
+CONTACT
+In index.html, replace YOUR_EMAIL@example.com and the generic LinkedIn URL with your actual contact details.
+
+VERIFY BEFORE PUBLISHING
+Review dates, degree names, job descriptions, project figures and claims. Remove confidential employer information. Label academic/simulated projects accurately. The certificate links are placeholders until files are uploaded and linked.
