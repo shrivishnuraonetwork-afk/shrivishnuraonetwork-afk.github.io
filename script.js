@@ -7,8 +7,24 @@ function draw(c){G.innerHTML=R.filter(function(r){return c==="All"||r[2]===c}).m
 setTimeout(function(){G.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%'})},60)}
 cats.forEach(function(c,i){var b=document.createElement('button');b.textContent=c;if(!i)b.className='on';b.onclick=function(){F.querySelectorAll('button').forEach(function(x){x.className=''});b.className='on';draw(c)};F.appendChild(b)});
 draw("All");
-var C=[["BMC","Bloomberg Market Concepts","Bloomberg for Education"],["ESG","ESG Certification","Bloomberg for Education"],["XL","Spreadsheet Analysis","Bloomberg for Education"],["FF","Finance Fundamentals","Bloomberg for Education"],["IB","Banking Pathway","AmplifyME · May 2026"],["MK","Markets Pathway","AmplifyME · May 2026"],["HPC","High Potential Candidate","AmplifyME · May 2026"],["IBO","Certified Investment Banking Operations Professional","Asset Mgmt, Risk, Trade Life Cycle"],["XL","Business Analytics with Excel","SkillUP by Simplilearn · Jan 2023"],["TB","Tableau Training","SkillUP by Simplilearn · Jan 2023"],["FB","Facebook Marketing & Advertising","SkillUP by Simplilearn · Jan 2023"]];
-document.getElementById('certgrid').innerHTML=C.map(function(c){return '<div class="card cert"><img src="certificates/'+c[0]+'.jpg" alt="'+c[1]+' certificate"><div><h4>'+c[1]+'</h4><small>'+c[2]+'</small></div></div>'}).join('');
+var C=[
+ ["BMC","Bloomberg Market Concepts","Bloomberg for Education","Bloomberg Market Concepts.pdf"],
+ ["ESG","ESG Certification","Bloomberg for Education","Bloomberg ESG.pdf"],
+ ["IB","Banking Pathway","AmplifyME · May 2026","Pathways - Banking - SHRIVISHNU RAO.pdf"],
+ ["MK","Markets Pathway","AmplifyME · May 2026","Pathways - Markets - SHRIVISHNU RAO.pdf"],
+ ["HPC","High Potential Candidate","AmplifyME · May 2026","AmplifyME High Potential Candidate.pdf"],
+ ["IBO","Certified Investment Banking Operations Professional","Asset Mgmt, Risk, Trade Life Cycle","CIBOP.pdf"],
+ ["TB","Tableau Training","SkillUP by Simplilearn · Jan 2023","Tableau Training.pdf"],
+ ["FB","Facebook Marketing & Advertising","SkillUP by Simplilearn · Jan 2023","Facebook Marketing and Advertising.pdf"],
+ ["BA","Business Analytics with Excel","SkillUP by Simplilearn · Jan 2023","Business Analytics with Excel.pdf"]
+];
+document.getElementById('certgrid').innerHTML=C.map(function(c){
+ var pdf=encodeURI(c[3]);
+ return '<div class="card cert"><a href="'+pdf+'" target="_blank" rel="noopener" class="cert-pdf-preview"><iframe src="'+pdf+'#page=1&toolbar=0&navpanes=0" title="'+c[1]+' certificate preview" loading="lazy"></iframe></a><div><h4>'+c[1]+'</h4><small>'+c[2]+'</small><a class="view" href="'+pdf+'" target="_blank" rel="noopener">View certificate ↗</a></div></div>';
+}).join('');
+var certStyle=document.createElement('style');
+certStyle.textContent='.cert-pdf-preview{display:block;height:230px;overflow:hidden;background:#fff;border-radius:8px;margin-bottom:14px}.cert-pdf-preview iframe{width:100%;height:320px;border:0;pointer-events:none;background:#fff}.cert .view{display:inline-block;margin-top:12px}';
+document.head.appendChild(certStyle);
 var c=document.getElementById('bg'),x=c.getContext('2d'),P=[],W,H,m={x:-999,y:-999};
 function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;var n=Math.min(90,Math.floor(W*H/14000));P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*1.8+.6})}
 function draw2(){x.clearRect(0,0,W,H);for(var i=0;i<P.length;i++){var p=P[i];if(!rm){p.x+=p.vx;p.y+=p.vy}if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fillStyle='rgba(212,175,55,.8)';x.fill();for(var j=i+1;j<P.length;j++){var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){x.strokeStyle='rgba(212,175,55,'+.25*(1-d/120)+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}var dm=Math.hypot(p.x-m.x,p.y-m.y);if(dm<150){x.strokeStyle='rgba(240,215,122,'+.5*(1-dm/150)+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}}if(!rm)requestAnimationFrame(draw2)}

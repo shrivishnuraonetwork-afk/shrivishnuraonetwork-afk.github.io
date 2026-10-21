@@ -36,3 +36,7 @@ PDF report links remain under reports/ and should use the corresponding PDF file
 
 ANIMATED BACKGROUND
 The particle canvas is now fixed to the viewport so the moving particles continue throughout the site, rather than only appearing on the home section.
+
+
+CERTIFICATE PDF DISPLAY
+The certificate cards now preview the first page of each linked PDF and open the full PDF when clicked. Upload the certificate PDFs to the repository root (same folder as index.html) with filenames matching the links in script.js. Finance Fundamentals and Spreadsheet Analysis are excluded.
