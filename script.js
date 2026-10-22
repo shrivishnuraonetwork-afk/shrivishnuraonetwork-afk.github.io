@@ -13,7 +13,7 @@ var C=[
  ["IB","Banking Pathway","AmplifyME · May 2026","Pathways - Banking - SHRIVISHNU RAO.pdf"],
  ["MK","Markets Pathway","AmplifyME · May 2026","Pathways - Markets - SHRIVISHNU RAO.pdf"],
  ["HPC","High Potential Candidate","AmplifyME · May 2026","AmplifyME High Potential Candidate.pdf"],
- ["IBO","Certified Investment Banking Operations Professional","Asset Mgmt, Risk, Trade Life Cycle","CIBOP.pdf"],
+ ["IBO","Certified Investment Banking Operations Professional","Imarticus Learning Institute","CIBOP.pdf"],
  ["TB","Tableau Training","SkillUP by Simplilearn · Jan 2023","Tableau Training.pdf"],
  ["FB","Facebook Marketing & Advertising","SkillUP by Simplilearn · Jan 2023","Facebook Marketing and Advertising.pdf"],
  ["BA","Business Analytics with Excel","SkillUP by Simplilearn · Jan 2023","Business Analytics with Excel.pdf"]
