@@ -104,3 +104,26 @@ section{position:relative;background:transparent}
 @media(max-width:700px){nav{align-items:flex-start}nav b{display:block}nav ul{gap:12px}nav li a{font-size:.8rem}.project-cover{height:180px}}
 
 nav, section, footer{position:relative;z-index:1} nav{position:fixed;z-index:20}
+
+/* Skills section: wider horizontal cards */
+#skills .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+#skills .card.skill {
+    min-width: 0;
+    padding: 24px;
+}
+
+#skills .skill .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media (max-width: 700px) {
+    #skills .grid {
+        grid-template-columns: 1fr;
+    }
+}
